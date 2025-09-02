@@ -12,7 +12,9 @@
     "migrate": "npx drizzle-kit migrate",
     "lint:fix": "eslint . --fix",
     "format": "prettier . --check",
-    "format:write": "prettier . --write"
+    "format:write": "prettier . --write",
+    "deploy": "npm run build && wrangler deploy",
+    "cf-typegen": "wrangler types --env-interface Env"
   },
   "devDependencies": {
     "@eslint/js": "^9.34.0",
@@ -88,6 +90,7 @@
     "next-themes": "^0.4.6",
     "node-vibrant": "^4.0.3",
     "pg": "^8.16.3",
+    "pg-native": "^3.5.2",
     "postcss": "^8.5.6",
     "postgres": "^3.4.7",
     "rate-limiter-flexible": "^7.2.0",
